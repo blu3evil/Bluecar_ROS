@@ -1,0 +1,2 @@
+bluecar_bringup:bluecar_description:bluecar_nav:bluecar_serial:bluecar_setup_tf:bluecar_teleport:bluecar_vision:learning_topic
+-DCATKIN_DEVEL_PREFIX=/home/blu3/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/blu3/catkin_ws/install -G Unix Makefiles

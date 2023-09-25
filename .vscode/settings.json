@@ -1,0 +1,12 @@
+{
+    "python.analysis.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "cmake.sourceDirectory": "/home/blu3/catkin_ws/src",
+    "files.associations": {
+        "iostream": "cpp"
+    }
+}

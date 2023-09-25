@@ -1,0 +1,14 @@
+<launch>
+    <machine name="bluecar" address="192.168.50.164" user="jetson" password="yahboom" env-loader="~/env.sh"/>
+    <arg name="use_rviz" default="true"/>
+    <!-- 驱动模块 || driver module -->
+    <include file="$(find bluecar_nav)/launch/library/rplidar.launch"/>
+    <include file="$(find bluecar_bringup)/launch/bringup.launch" />
+    <include file="$(find bluecar_nav)/launch/library/gmapping.launch" />
+    <include file="$(find bluecar_nav)/launch/view/view_gmapping.launch" if="$(arg use_rviz)"/>
+    <!--激光雷达的坐标系 || Lidar coordinate system --> 
+    <node pkg="tf" type="static_transform_publisher" name="odom_to_base_footprint"
+        args="0 0 0 0 0 0  /odom /base_link  30" machine="bluecar"/>
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
+        args="0 0 0.05 0 0 0  /base_link /laser 30" machine="bluecar"/>
+</launch>

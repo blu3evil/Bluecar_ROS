@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: bluecar_serial
+Description: Description of bluecar_serial
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: serial std_msgs roscpp nav_msgs geometry_msgs
