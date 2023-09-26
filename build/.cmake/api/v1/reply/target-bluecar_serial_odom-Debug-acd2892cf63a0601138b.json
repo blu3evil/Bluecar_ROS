@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "devel/lib/bluecar_setup_tf/tf_listener"
+			"path" : "devel/lib/bluecar_serial/bluecar_serial_odom"
 		}
 	],
 	"backtrace" : 1,
@@ -20,7 +20,7 @@
 		],
 		"files" : 
 		[
-			"bluecar_setup_tf/CMakeLists.txt",
+			"bluecar_serial/CMakeLists.txt",
 			"/opt/ros/melodic/share/rosconsole/cmake/rosconsole-extras.cmake",
 			"/opt/ros/melodic/share/rosconsole/cmake/rosconsoleConfig.cmake",
 			"/opt/ros/melodic/share/roscpp/cmake/roscppConfig.cmake",
@@ -37,13 +37,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 209,
+				"line" : 218,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 211,
+				"line" : 224,
 				"parent" : 0
 			},
 			{
@@ -136,7 +136,7 @@
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 119,
+				"line" : 128,
 				"parent" : 0
 			}
 		]
@@ -144,6 +144,12 @@
 	"compileGroups" : 
 	[
 		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
 			"defines" : 
 			[
 				{
@@ -156,7 +162,7 @@
 				},
 				{
 					"backtrace" : 19,
-					"define" : "ROS_PACKAGE_NAME=\"bluecar_setup_tf\""
+					"define" : "ROS_PACKAGE_NAME=\"bluecar_serial\""
 				}
 			],
 			"includes" : 
@@ -177,17 +183,26 @@
 			]
 		}
 	],
-	"id" : "tf_listener::@50f7de257a869c97c036",
+	"id" : "bluecar_serial_odom::@fe44dee69b21c428af68",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "-rdynamic",
 				"role" : "flags"
 			},
 			{
 				"fragment" : "-Wl,-rpath,/opt/ros/melodic/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/opt/ros/melodic/lib/libserial.so",
 				"role" : "libraries"
 			},
 			{
@@ -231,11 +246,6 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/ros/melodic/lib/libroscpp_serialization.so",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
 				"fragment" : "/opt/ros/melodic/lib/librosconsole.so",
 				"role" : "libraries"
 			},
@@ -255,6 +265,11 @@
 			},
 			{
 				"fragment" : "-lboost_regex",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/opt/ros/melodic/lib/libroscpp_serialization.so",
 				"role" : "libraries"
 			},
 			{
@@ -299,12 +314,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "tf_listener",
-	"nameOnDisk" : "tf_listener",
+	"name" : "bluecar_serial_odom",
+	"nameOnDisk" : "bluecar_serial_odom",
 	"paths" : 
 	{
-		"build" : "bluecar_setup_tf",
-		"source" : "bluecar_setup_tf"
+		"build" : "bluecar_serial",
+		"source" : "bluecar_serial"
 	},
 	"sourceGroups" : 
 	[
@@ -321,7 +336,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "bluecar_setup_tf/src/tf_listener.cpp",
+			"path" : "bluecar_serial/src/bluecar_serial_odom.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

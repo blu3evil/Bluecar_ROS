@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "gtest/googlemock/gtest/libgtest.so"
+			"path" : "gtest/googlemock/gtest/libgtest_main.so"
 		}
 	],
 	"backtrace" : 3,
@@ -31,7 +31,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 90,
+				"line" : 91,
 				"parent" : 0
 			},
 			{
@@ -59,6 +59,12 @@
 				"parent" : 2
 			},
 			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 92,
+				"parent" : 0
+			},
+			{
 				"command" : 5,
 				"file" : 0,
 				"line" : 154,
@@ -78,7 +84,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-fPIC"
+					"fragment" : "-g -fPIC"
 				},
 				{
 					"fragment" : " -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers"
@@ -87,21 +93,21 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"define" : "GTEST_CREATE_SHARED_LIBRARY=1"
 				},
 				{
-					"define" : "gtest_EXPORTS"
+					"define" : "gtest_main_EXPORTS"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"path" : "/usr/src/googletest/googletest/include"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"path" : "/usr/src/googletest/googletest"
 				}
 			],
@@ -112,7 +118,14 @@
 			]
 		}
 	],
-	"id" : "gtest::@91549fa14b017862b6ac",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 6,
+			"id" : "gtest::@91549fa14b017862b6ac"
+		}
+	],
+	"id" : "gtest_main::@91549fa14b017862b6ac",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -127,7 +140,17 @@
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/blu3/catkin_ws/build/gtest/googlemock/gtest/src",
+				"fragment" : "-Wl,-rpath,/home/blu3/catkin_ws/build/gtest/googlemock/gtest/src:/home/blu3/catkin_ws/build/gtest/googlemock/gtest",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "libgtest.so",
 				"role" : "libraries"
 			},
 			{
@@ -138,8 +161,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "gtest",
-	"nameOnDisk" : "libgtest.so",
+	"name" : "gtest_main",
+	"nameOnDisk" : "libgtest_main.so",
 	"paths" : 
 	{
 		"build" : "gtest/googlemock/gtest",
@@ -160,7 +183,7 @@
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
-			"path" : "/usr/src/googletest/googletest/src/gtest-all.cc",
+			"path" : "/usr/src/googletest/googletest/src/gtest_main.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

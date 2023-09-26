@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "devel/lib/bluecar_setup_tf/tf_broadcast"
+			"path" : "devel/lib/bluecar_setup_tf/tf_listener"
 		}
 	],
 	"backtrace" : 1,
@@ -37,13 +37,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 208,
+				"line" : 209,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 210,
+				"line" : 211,
 				"parent" : 0
 			},
 			{
@@ -144,6 +144,12 @@
 	"compileGroups" : 
 	[
 		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
 			"defines" : 
 			[
 				{
@@ -177,11 +183,15 @@
 			]
 		}
 	],
-	"id" : "tf_broadcast::@50f7de257a869c97c036",
+	"id" : "tf_listener::@50f7de257a869c97c036",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "-rdynamic",
 				"role" : "flags"
@@ -299,8 +309,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "tf_broadcast",
-	"nameOnDisk" : "tf_broadcast",
+	"name" : "tf_listener",
+	"nameOnDisk" : "tf_listener",
 	"paths" : 
 	{
 		"build" : "bluecar_setup_tf",
@@ -321,7 +331,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "bluecar_setup_tf/src/tf_broadcast.cpp",
+			"path" : "bluecar_setup_tf/src/tf_listener.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
